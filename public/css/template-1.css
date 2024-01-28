@@ -5,6 +5,10 @@
   --margin_block: 80px;
   --font-main: 'Roboto', sans-serif;
 }
+footer {
+  border-top: 1px solid #dee2e6;
+  padding: 24px 0px;
+}
 .page {
   background-color: #ffffff;
   font-family: var(--font-main);
