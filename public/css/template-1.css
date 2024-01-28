@@ -1,0 +1,113 @@
+:root {
+  --color-main: #212529;
+  --color-second: #6c757d;
+  --color-button: #007bff;
+  --margin_block: 80px;
+  --font-main: 'Roboto', sans-serif;
+}
+.page {
+  background-color: #ffffff;
+  font-family: var(--font-main);
+}
+.page_content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.page-block {
+  margin-bottom: var(--margin_block);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.header_logo {
+  font-size: 18px;
+}
+.nav_links {
+  text-decoration: none;
+  font-size: 16px;
+  color: #343a40;
+}
+.nav_inline > .nav_links {
+  margin-left: 24px;
+}
+
+.nav_links:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  color: var(--color-main);
+  width: 600px;
+  margin: 0 auto;
+}
+.hero_title {
+  font-size: 56px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.hero-text {
+  font-size: 20px;
+  line-height: 150%;
+}
+.plans-card {
+  color: var(--color-main);
+  text-align: center;
+}
+.plans-card:not(:last-of-type) {
+  margin-right: 24px;
+}
+
+.card-title {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 24px !important;
+}
+.card-title-second {
+  color: var(--color-second);
+  font-size: 29px;
+}
+.card-body {
+  padding: 24px !important;
+}
+
+.card-text > li:not(:last-of-type) {
+  padding-bottom: 12px;
+}
+.card-text {
+  padding: 0;
+  margin-bottom: 24px;
+}
+.card-button {
+  font-size: 19px !important;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+}
+.footer_copyright {
+  display: block;
+  color: var(--color-second);
+  font-size: 14px;
+  margin-top: 12px;
+}
+.nav_vertical {
+  display: flex;
+  flex-direction: column;
+}
+.nav_vertical > .nav_links {
+  color: var(--color-second);
+  font-size: 15px;
+}
+.nav_vertical > .nav_links:not(:last-child),
+.footer_title {
+  margin-bottom: 12px;
+}
+.footer_title {
+  color: var(--color-main);
+  font-size: 20px;
+}

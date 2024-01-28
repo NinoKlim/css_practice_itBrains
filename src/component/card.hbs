@@ -1,0 +1,19 @@
+{{#with data}}
+<div class="card">
+    <div class="card-header">{{name}}</div>
+    <div class="card-body">
+        <h5 class="card-title">${{prise}} <span class="card-title-second">/ mo</span> </h5>
+        <ul class="card-text">
+            {{#each features}}
+            <li>
+                {{this}}
+            </li>
+            {{/each}}
+        </ul>
+        <div class="d-grid ">
+            <button class="btn {{#if @first}}btn-outline-primary{{else}}btn-primary{{/if}} card-button"
+                type="button">{{button}}</button>
+        </div>
+    </div>
+</div>
+{{/with}}
