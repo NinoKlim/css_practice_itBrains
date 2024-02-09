@@ -1,0 +1,74 @@
+<div class="page">
+  <div class="page_content">
+    <header class="header page_block">
+      <div class="header_logo">
+        {{>logo}}
+      </div>
+      <nav>
+        {{>nav list=header isNav=true}}
+      </nav>
+    </header>
+    <div class="page_block">
+      <div class="hero">
+        {{>hero title=hero.title text=hero.text}}
+        <a href="{{hero.button.link}}" class="button-main">{{hero.button.text}}</a>
+      </div>
+    </div>
+    <div class="page_block">
+      <main class="row m-0">
+        {{#each preview}}
+        <div class="col-6 g-4">
+          {{>cardPreview data=this}}
+        </div>
+        {{/each}}
+      </main>
+    </div>
+    <div class="page_block">
+      <div class="news_header">
+        <h2 class="news_block_title">List of posts</h2>
+        <div>
+          {{#each categories}}
+          <span class="categories_item">{{text}}</span>
+          {{/each}}
+        </div>
+      </div>
+      <div class="row news_about_section">
+        <div class="col news_block">
+          {{#each news}}
+          {{>cardPost data=this}}
+          {{/each}}
+        </div>
+        <aside class="col about_block">
+          <div class="about_card">
+            <h3 class="about_title">About</h3>
+            <p class="about_text">
+              {{about}}
+            </p>
+          </div>
+
+
+          {{>linksList data=archive title="Archives"}}
+
+          {{>linksList data=social title="Social"}}
+        </aside>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="row">
+      <div class="col-3">
+        {{>logo}}
+        <span class="footer_copyright">Copyright 2023-2024</span>
+      </div>
+      {{#each footer}}
+      <div class="col-3">
+        <div class="footer_title">
+          {{title}}
+        </div>
+        {{>nav isVertical=true list=links}}
+      </div>
+      {{/each}}
+    </div>
+  </footer>
+</div>
+</div>

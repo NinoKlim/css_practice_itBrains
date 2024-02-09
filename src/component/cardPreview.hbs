@@ -1,0 +1,24 @@
+{{#with data}}
+<div class="card_preview">
+    <div class="row preview_header">
+        <div class="col-auto preview_date">{{date}}</div>
+        {{#each category}}
+        <div class="col-auto preview_item preview_id preview_{{id}}"> {{text}}</div>
+        {{/each}}
+    </div>
+    <div class="row">
+        <div class="col preview_title">
+            {{title}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col preview_text">
+            {{text}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col"><a href="#" class="block_links">Continue reading</a></div>
+    </div>
+</div>
+
+{{/with}}
