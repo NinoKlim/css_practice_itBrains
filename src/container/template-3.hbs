@@ -14,9 +14,26 @@
       {{text}}
     </p>
   </div>
-  <img src="{{photo}}" alt="hero image" class="hero_image">
+  <div class="hero_slider">
+    <div class="hero_icon hero_slider_right">
+      {{right}}
+    </div>
+    <img src="{{photo}}" alt="hero_image" class="hero_image">
+    <div class="hero_icon hero_slider_left">
+      {{left}}
+    </div>
+  </div>
 </div>
 {{/with}}
+<div class="modal">
+  {{hero.text}} {{hero.text}}
+  <img src="{{hero.photo}}" alt="hero_image" class="modal_image">
+
+  <div class="modal_text">
+    {{hero.text}}
+  </div>
+
+</div>
 <main class="blog">
   {{#each blog}}
   {{>cardBlog data=this}}
