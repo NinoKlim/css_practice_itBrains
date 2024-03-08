@@ -1,3 +1,26 @@
+@keyframes fly {
+  from {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 500px;
+    left: 500px;
+    background-color: #cfefa8;
+    color: #343a40;
+  }
+  50% {
+    left: 0px;
+    background-color: #798e60;
+    color: #9ca2a8;
+  }
+
+  to {
+    top: 0px;
+    left: 0px;
+  }
+}
+
 :root {
   --space-sm: 12px;
   --space-med: 24px;
@@ -14,6 +37,7 @@
   --font-size-title: 50px;
   --font-size-subtitle: 32px;
 }
+
 footer {
   border-top: 1px solid var(--color-border);
   padding: var(--padding-border) 0px;
@@ -36,7 +60,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 80px;
-  /* padding-top: 74px; */
 }
 .header {
   position: sticky;
@@ -56,19 +79,34 @@ ul {
   padding: var(--space-sm);
   color: #fff;
   border-radius: 8px;
-  position: sticky;
-  top: 24px;
+  position: fixed;
+  top: 124px;
   right: 24px;
   line-height: 150%;
+  /* transition: top 3s;
+  transition-timing-function: ease-in; */
 }
-.modal_image {
+
+body:hover .modal {
+  /* top: 500px; */
+  animation-name: fly;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(
+    0.075,
+    0.82,
+    0.165,
+    1
+  );
+}
+
+/* .modal_image {
   width: 300px;
   height: 100px;
   float: right;
   margin: 12px 12px 0px 0;
   object-fit: fill;
   background-color: #007bff;
-}
+} */
 .modal_text {
   clear: right;
   user-select: none;
@@ -135,9 +173,13 @@ ul {
 
   font-size: var(--font-size-text-second);
   color: #fff;
+  transition-property: opacity, background-color, color;
+  transition-duration: 1s;
 }
 .card_button:hover {
   opacity: 0.7;
+  background-color: #cfefa8;
+  color: var(--color-main);
 }
 .hero_image {
   /* position: absolute;
