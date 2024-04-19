@@ -73,7 +73,7 @@ ul {
   border-bottom: 1px solid #dee2e6;
   z-index: 1;
 }
-.modal {
+/* .modal {
   width: 600px;
   background-color: #343a40;
   padding: var(--space-sm);
@@ -85,7 +85,7 @@ ul {
   line-height: 150%;
   /* transition: top 3s;
   transition-timing-function: ease-in; */
-}
+/* } */
 
 body:hover .modal {
   /* top: 500px; */
@@ -107,10 +107,10 @@ body:hover .modal {
   object-fit: fill;
   background-color: #007bff;
 } */
-.modal_text {
+/* .modal_text {
   clear: right;
   user-select: none;
-}
+} */
 .badge_block {
   background-color: rgb(17, 255, 187);
   border: 1px sold var(--color-border);
@@ -216,9 +216,21 @@ body:hover .modal {
   left: var(--space-med);
 }
 .blog {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   border-bottom: 1px solid var(--color-border);
   padding-bottom: var(--padding-border);
+}
+@media all and (min-width: 601px) and (max-width: 800px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (max-width: 600px) {
+  .blog {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .card {
   display: flex;

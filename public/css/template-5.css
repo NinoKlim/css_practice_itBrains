@@ -194,8 +194,13 @@ footer {
   line-height: 150%;
 }
 .advantages {
-  display: flex;
+  display: grid;
   gap: 24px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  );
+  grid-template-rows: 1fr;
 }
 .advantages_item {
   width: 100%;
@@ -215,12 +220,15 @@ footer {
   color: var(--color-third-muted);
 }
 .footer_block {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
 }
-
+.footer_block > div:first-of-type {
+  grid-column: 1 / 3;
+}
 .footer_copyright {
-  display: block;
+  /* display: block; */
   color: var(--color-second);
   font-size: var(--font-size-text-primary);
   margin-top: var(--space-sm);
