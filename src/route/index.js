@@ -1069,6 +1069,12 @@ router.get('/template-7', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+router.get('/slack', function (req, res) {
+  res.render('slack', {
+    layout: 'slack',
+  })
+})
+
 // ================================================================
 
 // Підключаємо роутер до бек-енду
